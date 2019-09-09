@@ -10,7 +10,7 @@ const UserCard = props => {
           <Card.Header>{props.name}</Card.Header>
           <Card.Meta>{props.username}</Card.Meta>
           <Card.Description>{props.bio}</Card.Description>
-        </Card.Content>    
+        </Card.Content>  
         </Card>
     );
 };

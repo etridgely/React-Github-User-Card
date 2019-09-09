@@ -38,12 +38,12 @@ class App extends React.Component {
           bio={this.state.user.bio}
           profile={this.state.user.blog}
         />}
-        {this.state.followers.map(user => {
+        {this.state.followers.map(follower => {
           return <UserCard
-          key={user.id}
-          imgURL={user.avatar_url}
-          username={user.login}
-          profile={user.html_url}
+          key={follower.id}
+          imgURL={follower.avatar_url}
+          username={follower.login}
+          profile={follower.html_url}
         />
         })}
       </div>
