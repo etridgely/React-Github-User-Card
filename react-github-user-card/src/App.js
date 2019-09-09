@@ -10,12 +10,21 @@ class App extends React.Component {
       user: [],
       followers: []
     };
-  }
+  };
 
   componentDidMount() {
-    axios.get(`https://api.github.com/users/etridgely`)
-      .then(res => this.setState(res))
+    axios.get("https://api.github.com/users/etridgely")
+      .then(res => this.setState({
+        user: res.data
+      }))
+      .catch(e => console.log(e));
+      axios.get("https://api.github.com/users/etridgely/followers")
+      .then(res => this.setState({
+        followers: res.data
+      }))
+      .catch(e => console.log(e));
   }
+
   render() {
 
     return (
